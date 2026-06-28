@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Tier List — Переезд сайта</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0d0d13 url('image_33ef60.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .redirect-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* Стили для кликабельной картинки */
+        .main-link {
+            display: block;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 110, 255, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0, 110, 255, 0.8);
+        }
+
+        .main-img {
+            display: block;
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        /* Общие стили для стрелочек */
+        .arrow {
+            font-size: 4rem;
+            color: #00d2ff;
+            text-shadow: 0 0 20px #006eff;
+            user-select: none;
+            font-weight: bold;
+        }
+
+        /* Левая стрелка (смотрит вправо, пульсирует к картинке) */
+        .arrow-left {
+            animation: bounceLeft 1.5s infinite ease-in-out;
+        }
+
+        /* Правая стрелка (развёрнута влево, пульсирует к картинке) */
+        .arrow-right {
+            transform: scaleX(-1);
+            animation: bounceRight 1.5s infinite ease-in-out;
+        }
+
+        /* Анимация для левой стрелки (движение вправо) */
+        @keyframes bounceLeft {
+            0%, 100% { transform: translateX(0); opacity: 0.6; }
+            50% { transform: translateX(15px); opacity: 1; }
+        }
+
+        /* Анимация для правой стрелки (учитывает разворот scaleX и движется влево) */
+        @keyframes bounceRight {
+            0%, 100% { transform: scaleX(-1) translateX(0); opacity: 0.6; }
+            50% { transform: scaleX(-1) translateX(15px); opacity: 1; }
+        }
+
+        /* Текст под картинкой */
+        .info-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 110, 255, 0.5);
+            max-width: 600px;
+            line-height: 1.4;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            .redirect-wrapper {
+                gap: 15px;
+            }
+            .main-img {
+                max-width: 240px;
+            }
+            .arrow {
+                font-size: 2.5rem;
+            }
+            .info-text {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="redirect-wrapper">
+            <div class="arrow arrow-left">➔</div>
+            
+            <a href="https://kannurali.github.io/MaknemyTierlist/" class="main-link" title="Перейти на новый сайт">
+                <img src="IMG_2427.PNG" alt="Nexus Tier List" class="main-img">
+            </a>
+            
+            <div class="arrow arrow-right">➔</div>
+        </div>
+
+        <p class="info-text">Сайт Nexus Tier List переехал по новому адресу.</p>
+    </div>
+
+</body>
+</html>
